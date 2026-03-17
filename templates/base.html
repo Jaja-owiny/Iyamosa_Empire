@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="{% block meta_description %}Iyamossa Empire - Innovation Meets Excellence. Digital Marketing, Web Design, Photography, Construction Services{% endblock %}">
+    <meta name="keywords"
+        content="{% block meta_keywords %}digital marketing, web design, photography, construction, automation, graphic design, Kenya, JKUAT{% endblock %}">
+    <meta name="author" content="Iyamossa Empire">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google Verification -->
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{% block og_title %}Iyamosa Empire - Innovation Meets Excellence{% endblock %}">
+    <meta property="og:description"
+        content="{% block og_description %}Professional services in digital marketing, web design, photography, and construction{% endblock %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{% block og_url %}https://iyamosa-empire.onrender.com{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}/static/images/og-image.jpg{% endblock %}">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}Iyamossa Empire{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}Innovation Meets Excellence{% endblock %}">
+
+    <title>{% block title %}Iyamossa Empire - Innovation Meets Excellence{% endblock %}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/icons/favicon.ico" class="favicon-circle">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.jpg" class="favicon-circle">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.jpg" class="favicon-circle">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.jpg" class="favicon-circle">
+
+    <!-- Preload Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/variables.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hero.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    {% block extra_css %}{% endblock %}
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <div class="navbar-menu" id="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link {% if request.endpoint == 'index' %}active{% endif %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about"
+                            class="nav-link {% if request.endpoint == 'about' %}active{% endif %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/team" class="nav-link {% if request.endpoint == 'team' %}active{% endif %}">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/projects"
+                            class="nav-link {% if request.endpoint == 'projects' %}active{% endif %}">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/#contact"
+                            class="nav-link {% if request.endpoint == 'contact' %}active{% endif %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- New test footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <!-- Floating Navigation Bar -->
+            <div class="footer-nav">
+                <ul class="fnav-icons">
+                    <!-- Left side social icons -->
+                    <li class="fnav-item"><a href="#" class="fnav-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li class="fnav-item"><a href="#" class="fnav-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    
+                    <!-- MIDDLE: HOME ICON (centered by flex spacing) -->
+                    <li class="fnav-item home"><a href="{{ url_for('index') }}" class="fnav-link" aria-label="Home"><i class="fas fa-home"></i></a></li>
+                    
+                    <!-- Right side social icons -->
+                    <li class="fnav-item"><a href="#" class="fnav-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li class="fnav-item"><a href="#" class="fnav-link" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- Extended bottom area for copyright -->
+            <div class="copyright-area">
+                <div class="copyright-divider"></div>
+                <p>© 2026 Iyamosa Empire. All rights reserved.</p>
+                <p style="font-size: 0.75rem; opacity: 0.6;">Your Trusted Marketing Partner</p>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer-->
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/hero.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

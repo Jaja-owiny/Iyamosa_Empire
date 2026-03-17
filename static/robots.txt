@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://iyamossa-empire.onrender.com/sitemap.xml

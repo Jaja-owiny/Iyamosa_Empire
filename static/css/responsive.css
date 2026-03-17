@@ -1,0 +1,185 @@
+/* Iyamossa Empire - Responsive Utilities */
+
+/* Responsive Visibility Classes */
+.visible-xs { display: none !important; }
+.visible-sm { display: none !important; }
+.visible-md { display: none !important; }
+.visible-lg { display: none !important; }
+.visible-xl { display: none !important; }
+
+.hidden-xs { display: initial !important; }
+.hidden-sm { display: initial !important; }
+.hidden-md { display: initial !important; }
+.hidden-lg { display: initial !important; }
+.hidden-xl { display: initial !important; }
+
+/* Mobile First Responsive Classes */
+@media (max-width: 480px) {
+  .visible-xs { display: block !important; }
+  .hidden-xs { display: none !important; }
+  
+  .text-xs-center { text-align: center !important; }
+  .text-xs-left { text-align: left !important; }
+  .text-xs-right { text-align: right !important; }
+  
+  .flex-xs-column { flex-direction: column !important; }
+  .flex-xs-row { flex-direction: row !important; }
+  
+  .w-xs-100 { width: 100% !important; }
+  .w-xs-75 { width: 75% !important; }
+  .w-xs-50 { width: 50% !important; }
+  .w-xs-25 { width: 25% !important; }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .visible-sm { display: block !important; }
+  .hidden-sm { display: none !important; }
+  
+  .text-sm-center { text-align: center !important; }
+  .text-sm-left { text-align: left !important; }
+  .text-sm-right { text-align: right !important; }
+  
+  .flex-sm-column { flex-direction: column !important; }
+  .flex-sm-row { flex-direction: row !important; }
+  
+  .w-sm-100 { width: 100% !important; }
+  .w-sm-75 { width: 75% !important; }
+  .w-sm-50 { width: 50% !important; }
+  .w-sm-25 { width: 25% !important; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .visible-md { display: block !important; }
+  .hidden-md { display: none !important; }
+  
+  .text-md-center { text-align: center !important; }
+  .text-md-left { text-align: left !important; }
+  .text-md-right { text-align: right !important; }
+  
+  .flex-md-column { flex-direction: column !important; }
+  .flex-md-row { flex-direction: row !important; }
+  
+  .w-md-100 { width: 100% !important; }
+  .w-md-75 { width: 75% !important; }
+  .w-md-50 { width: 50% !important; }
+  .w-md-25 { width: 25% !important; }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .visible-lg { display: block !important; }
+  .hidden-lg { display: none !important; }
+  
+  .text-lg-center { text-align: center !important; }
+  .text-lg-left { text-align: left !important; }
+  .text-lg-right { text-align: right !important; }
+  
+  .flex-lg-column { flex-direction: column !important; }
+  .flex-lg-row { flex-direction: row !important; }
+  
+  .w-lg-100 { width: 100% !important; }
+  .w-lg-75 { width: 75% !important; }
+  .w-lg-50 { width: 50% !important; }
+  .w-lg-25 { width: 25% !important; }
+}
+
+@media (min-width: 1281px) {
+  .visible-xl { display: block !important; }
+  .hidden-xl { display: none !important; }
+  
+  .text-xl-center { text-align: center !important; }
+  .text-xl-left { text-align: left !important; }
+  .text-xl-right { text-align: right !important; }
+  
+  .flex-xl-column { flex-direction: column !important; }
+  .flex-xl-row { flex-direction: row !important; }
+  
+  .w-xl-100 { width: 100% !important; }
+  .w-xl-75 { width: 75% !important; }
+  .w-xl-50 { width: 50% !important; }
+  .w-xl-25 { width: 25% !important; }
+}
+
+/* Fluid Typography Classes */
+.text-fluid-xs { font-size: clamp(0.75rem, 2vw, 0.875rem) !important; }
+.text-fluid-sm { font-size: clamp(0.875rem, 2.5vw, 1rem) !important; }
+.text-fluid-md { font-size: clamp(1rem, 3vw, 1.125rem) !important; }
+.text-fluid-lg { font-size: clamp(1.125rem, 3.5vw, 1.25rem) !important; }
+.text-fluid-xl { font-size: clamp(1.25rem, 4vw, 1.5rem) !important; }
+.text-fluid-2xl { font-size: clamp(1.5rem, 5vw, 2rem) !important; }
+.text-fluid-3xl { font-size: clamp(2rem, 6vw, 2.5rem) !important; }
+.text-fluid-4xl { font-size: clamp(2.5rem, 7vw, 3rem) !important; }
+.text-fluid-5xl { font-size: clamp(3rem, 8vw, 4rem) !important; }
+.text-fluid-6xl { font-size: clamp(4rem, 10vw, 6rem) !important; }
+
+/* Spacing Utilities */
+.m-0 { margin: 0 !important; }
+.m-1 { margin: var(--spacing-xs) !important; }
+.m-2 { margin: var(--spacing-sm) !important; }
+.m-3 { margin: var(--spacing-md) !important; }
+.m-4 { margin: var(--spacing-lg) !important; }
+.m-5 { margin: var(--spacing-xl) !important; }
+
+.p-0 { padding: 0 !important; }
+.p-1 { padding: var(--spacing-xs) !important; }
+.p-2 { padding: var(--spacing-sm) !important; }
+.p-3 { padding: var(--spacing-md) !important; }
+.p-4 { padding: var(--spacing-lg) !important; }
+.p-5 { padding: var(--spacing-xl) !important; }
+
+/* Responsive Spacing */
+@media (max-width: 768px) {
+  .m-xs-0 { margin: 0 !important; }
+  .m-xs-1 { margin: var(--spacing-xs) !important; }
+  .m-xs-2 { margin: var(--spacing-sm) !important; }
+  .m-xs-3 { margin: var(--spacing-md) !important; }
+  
+  .p-xs-0 { padding: 0 !important; }
+  .p-xs-1 { padding: var(--spacing-xs) !important; }
+  .p-xs-2 { padding: var(--spacing-sm) !important; }
+  .p-xs-3 { padding: var(--spacing-md) !important; }
+}
+
+/* Performance Optimizations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High DPI Display Optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-background {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shadow-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .header,
+  .back-to-top,
+  .navbar-toggle {
+    display: none !important;
+  }
+  
+  .hero {
+    height: auto !important;
+    min-height: auto !important;
+  }
+  
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}

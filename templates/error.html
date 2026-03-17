@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {% if error_code %}
+        Error {{ error_code }}
+    {% else %}
+        Page Not Found
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<section class="error-section">
+    <div class="container">
+        {# Set defaults for backward compatibility or when no variables are passed #}
+        {% set error_code = error_code | default(404) %}
+        {% set error_message = error_message | default('The page you\'re looking for doesn\'t exist or has been moved.') %}
+
+        <h1>{{ error_code }} - {{ error_message }}</h1>
+        <p class="error-message">{{ error_description | default('') }}</p>
+        <div class="cta-buttons">
+            <a href="{{ url_for('index') }}" class="btn primary-btn">Return to Homepage</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
