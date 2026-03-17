@@ -30,10 +30,10 @@
     <title>{% block title %}Iyamossa Empire - Innovation Meets Excellence{% endblock %}</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/static/icons/favicon.ico" class="favicon-circle">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.jpg" class="favicon-circle">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.jpg" class="favicon-circle">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.jpg" class="favicon-circle">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons/iyamosa_256x256.ico') }}" class="favicon-circle">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='icons/iyamosa_180x180.png') }}" class="favicon-circle">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='icons/iyamosa_32x32.png') }}" class="favicon-circle">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='icons/iyamosa_16x16.png') }}" class="favicon-circle">
 
     <!-- Preload Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
